@@ -1,0 +1,6 @@
+.about-img-bg {
+  width: 200px;
+  height: 475px;
+  background: url("/src/assets/purple-bg.svg") no-repeat center center;
+  background-size: cover;
+}

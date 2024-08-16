@@ -1,0 +1,9 @@
+.navbar-video {
+  height: 40px;
+  width: 50px;
+  margin-right: 0.3rem;
+}
+.navbar-logo:hover {
+  color: #baa4ee;
+}
+

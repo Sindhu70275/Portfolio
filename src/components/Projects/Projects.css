@@ -1,0 +1,9 @@
+.project-tag {
+  border: 0.1px solid #baa4ee;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #0d0d0d;
+}

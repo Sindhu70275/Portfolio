@@ -1,0 +1,6 @@
+.contact-container {
+  align-items: center;
+  background-image: url("../../assets/contact-bg.svg");
+  background-size: cover;
+  height: 250px;
+}
