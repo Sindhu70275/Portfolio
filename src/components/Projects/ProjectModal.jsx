@@ -20,9 +20,9 @@ const ProjectModal = ({ open, handleClose, project }) => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: { xs: "80%", md: "60%" },
+          width: { xs: "75%", md: "60%" },
           maxWidth: 800,
-          maxHeight: "90vh",
+          maxHeight: "80vh",
           bgcolor: "background.paper",
           boxShadow: 24,
           p: 4,
@@ -44,7 +44,13 @@ const ProjectModal = ({ open, handleClose, project }) => {
           <CloseIcon />
         </IconButton>
         <CardMedia
-          sx={{ height: 200, borderRadius: "10px", marginY: "1rem" }}
+          sx={{ 
+            width: "100%", 
+            height: { xs: "150px", md: "360px" }, 
+            objectFit: "cover",
+            borderRadius: "10px",
+            marginY: "1rem",
+          }}
           image={project.image}
           title={project.title}
         />
@@ -73,9 +79,12 @@ const ProjectModal = ({ open, handleClose, project }) => {
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'center',
+          padding: "0rem",
         }}>
-          <CustomButton label="View Code" variant="Contained" width="100%" />
-          <CustomButton label="View Live App" width="100%" />
+          <CustomButton label="View Code" variant="Contained" width="100%" target="display"
+            href={project.github}/>
+          <CustomButton label="View Live App" width="100%" target="display"
+            href={project.webapp}/>
         </CardActions>
       </Box>
     </Modal>

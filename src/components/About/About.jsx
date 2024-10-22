@@ -14,19 +14,20 @@ const About = () => {
       container
       spacing={6}
       sx={{
-        flexDirection: { xs: "column-reverse", md: "row" },
-        marginTop: "5.7rem",
+        flexDirection: { xs: "column-reverse", lg: "row" },
+        marginTop: {xs:"3rem", lg:"5.7rem"},
+        alignItems: "center",
       }}
     >
-      <Grid item xs={12} md={7}>
+      <Grid item xs={12} lg={7}>
         <Stack>
           <CardContent>
-            <Typography component="div" className="about-main-heading" sx={{ fontSize: "3.1rem", fontWeight: "700" }}>
+            <Typography component="div" className="about-main-heading" sx={{ fontSize: {xs:"1.8rem", md:"3.1rem"}, fontWeight: "700" }}>
               Hi there!
               <br />
               I'm {Bio.name}
             </Typography>
-            <Typography component="div" variant="h6" sx={{ fontSize: "2rem", fontWeight: "600", marginY: "0.5rem" }}>
+            <Typography component="div" variant="h6" sx={{ fontSize: {xs:"1.5rem", md:"2rem"}, fontWeight: "600", marginY: "0.5rem" }}>
               I'm a{" "}
               <span style={{ color: "#baa4ee", fontWeight: "bold" }}>
                 <Typewriter
@@ -63,16 +64,22 @@ const About = () => {
       <Grid
         item
         xs={12}
-        md={5}
+        lg={5}
         className="about-img-bg"
-        sx={{ marginTop: "4rem" }}
       >
-        {/* <CardMedia
+        <CardMedia
           component="img"
-          height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="/Profile.jpeg"
           alt="my-profile"
-        /> */}
+          sx={{
+            width: "100%",
+            height: "100%", 
+            maxWidth: { xs:"280px", md:"400px"},
+            maxHeight: { xs:"280px", md:"400px"},
+            borderRadius: "50%", 
+            border: "6px solid #baa4ee",
+          }}
+        />
       </Grid>
     </Grid>
   );

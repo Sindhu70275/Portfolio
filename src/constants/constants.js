@@ -122,10 +122,18 @@ export const education = [
 
 export const experience = [
   {
+    role: "Software Engineer",
+    company: "Hexaware Technologies",
+    date: "July 2024 – Present",
+    details:
+      "As a skilled MERN stack developer, I excel in creating responsive web designs and have extensive knowledge of hooks. I am proficient in writing test cases with Jest, setting up ESLint for optimal code quality, and enhancing accessibility and performance using the Lighthouse tool. I have thoroughly explored and mastered these modern concepts. Additionally, I have maintained and modified backend systems to support new features, and developed backend APIs to facilitate these enhancements.",
+  },
+  {
     role: "Associate Software Engineer",
     company: "Hexaware Technologies",
-    date: "Aug 2022 – Present",
-    details: `As a ReactJS Developer at Hexaware Technologies, I excelled in developing a mentor application using MUI, React Hooks and Hook Form. Leveraging HTML and CSS, created responsive, user-friendly interfaces while maintaining backend APIs. I conducted unit testing with Jest to ensure high-quality code. Collaborating closely with design and development teams, I enhanced web performance and streamlined development processes with reusable components.`,
+    date: "Aug 2022 – June 2024",
+    details:
+      "As a ReactJS Developer at Hexaware Technologies, I excelled in developing a mentor application using MUI, React Hooks and Hook Form. Leveraging HTML and CSS, created responsive, user-friendly interfaces while maintaining backend APIs. I conducted unit testing with Jest to ensure high-quality code. Collaborating closely with design and development teams, I enhanced web performance and streamlined development processes with reusable components.",
   },
   {
     role: "Premier Graduate Engineer Trainee",
@@ -138,16 +146,52 @@ export const experience = [
 
 export const projects = [
   {
-    id: 0,
-    title: "Cook.io - Online Recipe App",
-    date: "Aug 2024",
+    id: 3,
+    title: "Fab Finds - Ecommerce",
+    date: "Oct 2024",
     description:
-      "Cook.io is an impressive showcase of my HTML, CSS, and JavaScript skills, enriched by the integration of the Edamam API. This project offers a user-friendly platform for recipe discovery, empowering users to search, explore, and interact with a vast array of culinary ideas. It boasts features like filtering, sorting, saving favorites, and creating shopping lists. Its responsive design ensures compatibility with a range of devices. The utilization of the Edamam API enhances the app's capabilities. Throughout development, I successfully addressed challenges related to API integration, making this project a testament to my evolving web development skills. As my journey continues, I look forward to further enhancing the app by adding user accounts and additional functionalities. Explore the live project here to see it in action.",
-    image:
-      "https://user-images.githubusercontent.com/120004894/279390357-2ca33d8e-6164-47b5-849e-c8dd60fc7dc1.png",
-    tags: ["HTML", "CSS", "JavaScript", "Edamam API"],
+      "Fab Finds is a fully responsive e-commerce web app, leveraging the Fake Store API for dynamic product listings. Built with React, it features efficient navigation using React Router DOM, and integrates the useEffect hook to handle API interactions. The app offers advanced product filtering, including category and rating filters, as well as sorting functionalities (price high to low, low to high). Cart management—add, update, and delete actions—are implemented using the useContext hook, ensuring seamless user experience across shopping activities.",
+    image: "https://github.com/Sindhu70275/Assets/blob/main/fabfinds.jpeg?raw=true",
+    tags: ["Fake Store API", "useContext Hook", "React", "MUI"],
     category: "web app",
-    github: "https://github.com/navanee1609/cook.io",
-    webapp: "https://cookio-recipehub.netlify.app/",
+    github: "https://github.com/Sindhu70275/FabFinds",
+    webapp: "https://fabfinds-ecommerce.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "VIP Restaurant",
+    date: "Sept 2024",
+    description:
+      "VIP Restaurant is a sleek web app built using React and the MUI library, showcasing my skills in form handling with React Hook Form. The platform allows users to easily explore restaurant offerings with an engaging and dynamic interface. To enhance user experience, subtle animations have been incorporated, adding a playful touch to interactions. The app is designed to be responsive and intuitive, with the potential for further enhancements like user accounts and personalized features. Explore the live project here to see it in action.",
+    image: "https://github.com/Sindhu70275/Assets/blob/main/vip.png?raw=true",
+    tags: ["React", "Material-UI"],
+    category: "web app",
+    github: "https://github.com/Sindhu70275/Vibrantly-Impressive-Plates",
+    webapp: "https://vibrantly-impressive-plates.netlify.app/",
+  },
+  {
+    id: 1,
+    title: "Emoji Game",
+    date: "Sept 2024",
+    description:
+      "The 4x3 Emoji Game is a fun and challenging memory game where players aim to click on each unique emoji only once. If the same emoji is clicked twice, the game ends, but players can easily restart by clicking the Play Again button. The game tracks scores, displaying the top score out of the games played. Built using MUI with a responsive layout, I implemented React’s useState hook for game state management. Additionally, I set up ESLint for error checking and to organize import statements, ensuring clean and maintainable code.",
+    image: "https://github.com/Sindhu70275/Assets/blob/main/emoji.png?raw=true",
+    tags: ["useState Hook", "Material-UI"],
+    category: "webgame app",
+    github: "https://github.com/Sindhu70275/Emoji-Game",
+    webapp: "https://smiley-emojigame.netlify.app/",
+  },
+  {
+    id: 0,
+    title: "Match Game",
+    date: "Sept 2024",
+    description:
+      "The Match Game is an engaging image-matching game where players are shown a random image from one of three categories—fruits, places, and animals—and must match it with the correct image from a set of 10 images per category. The game features a 60-second timer, and if players fail to match the image, the game ends and displays the score. Players can restart the game by clicking Play Again, which resets the timer and score. Built using MUI for a responsive layout, I utilized React’s useState and useEffect hooks for state management and timer logic, and implemented ESLint for error checking and organized imports.",
+    image:
+      "https://github.com/Sindhu70275/Assets/blob/main/match%20game.png?raw=true",
+    tags: ["useState Hook", "useEffect Hook", "MUI"],
+    category: "webgame app",
+    github: "https://github.com/Sindhu70275/Match-Game",
+    webapp: "https://matchthepicsgame.netlify.app/",
   },
 ];

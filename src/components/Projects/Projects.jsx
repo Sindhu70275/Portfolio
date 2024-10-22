@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "@mui/material/Card";
+import { styled } from '@mui/system';
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -9,6 +9,21 @@ import Stack from "@mui/material/Stack";
 import { projects } from "../../constants/constants";
 import "./Projects.css";
 import ProjectModal from "./ProjectModal";
+
+const PopCard = styled(CardMedia)(({ theme }) => ({
+  height: 'auto',
+  maxWidth: '100%',
+  position: 'relative',
+  overflow: 'hidden',
+  '&:hover .speedDialActions': {
+      opacity: 1,
+      visibility: 'visible',
+  },
+  transform: 'scale(0.9)',
+  '&:hover': {
+      transform: 'scale(1)',
+  },
+}));
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
@@ -39,20 +54,25 @@ const Projects = () => {
       </Grid>
       {projects.map((project) => (
         <Grid item xs={12} md={6} lg={4} key={project.id}>
-          <Card
+          <PopCard
             sx={{
               border: '0.1px solid #baa4ee',
               boxShadow: 'rgba(23, 92, 230, 0.15) 0px 4px 24px',
               borderRadius: '0.625rem',
               padding: '26px 20px',
               cursor: 'pointer',
-              height: 460,
+              height: 400,
               margin: "1rem",
             }}
             onClick={() => handleOpen(project)}
           >
             <CardMedia
-              sx={{ height: 200, borderRadius: "10px" }}
+              component="img"
+              sx={{
+                height: "auto",
+                width: "100%",
+                borderRadius: "10px",
+              }}
               image={project.image}
               title={project.title}
             />
@@ -102,7 +122,7 @@ const Projects = () => {
                 {project.description}
               </Typography>
             </CardContent>
-          </Card>
+          </PopCard>
         </Grid>
       ))
       }
@@ -111,6 +131,19 @@ const Projects = () => {
         handleClose={handleClose}
         project={selectedProject}
       />
+      <style>{`
+                @keyframes pop {
+                    0% {
+                        transform: scale(1);
+                    }
+                    50% {
+                        transform: scale(1.1);
+                    }
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            `}</style>
     </Grid >
   );
 };

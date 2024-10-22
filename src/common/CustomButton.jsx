@@ -10,7 +10,7 @@ const CustomButton = ({ label, variant, onClick, href, target, width }) => {
         border: variant === "Contained" ? "none" : "2px solid #baa4ee",
         borderRadius: "0.4rem",
         "&.MuiButtonBase-root:hover": {
-          background: variant === "Contained" ? "#baa4ee" : "",
+          backgroundColor: variant === "Contained" ? "#baa4ee" : "",
           color: variant === "Contained" ? "white" : "#baa4ee",
           borderColor: "inherit",
         },
