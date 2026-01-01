@@ -147,7 +147,7 @@ export const experience = [
   {
     role: "Software Engineer I",
     company: "Hexaware Technologies",
-    date: "July 2024 – Feb 2024",
+    date: "July 2024 – Feb 2025",
     details:
       "Worked on an artifactory web-app focused on managing and optimizing 3D assets. Gained a deep understanding of the 3D asset pipeline, including processes like baking, exporting, assembling, and reassembling assets. This project helped me enhance my skills in managing complex workflows, integrating full-stack solutions, and optimizing asset management systems.",
     technologies: ["ReactJS", "ShadCN", "Tailwind CSS"],

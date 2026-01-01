@@ -1,7 +1,7 @@
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { CardActions, CardMedia, Stack } from "@mui/material";
+import { CardActions, Stack } from "@mui/material";
 import { Typewriter } from "react-simple-typewriter";
 
 import "./About.css";
@@ -14,12 +14,11 @@ const About = () => {
       container
       spacing={6}
       sx={{
-        flexDirection: { xs: "column-reverse", lg: "row" },
-        marginTop: {xs:"3rem", lg:"5.7rem"},
+        marginTop: {xs:"3rem"},
         alignItems: "center",
       }}
     >
-      <Grid item xs={12} lg={7}>
+      <Grid item xs={12}>
         <Stack>
           <CardContent>
             <Typography component="div" className="about-main-heading" sx={{ fontSize: {xs:"1.8rem", md:"3.1rem"}, fontWeight: "700" }}>
@@ -60,26 +59,6 @@ const About = () => {
             href={Bio.linkedin}
           />
         </CardActions>
-      </Grid>
-      <Grid
-        item
-        xs={12}
-        lg={5}
-        className="about-img-bg"
-      >
-        <CardMedia
-          component="img"
-          image="/Profile.jpeg"
-          alt="my-profile"
-          sx={{
-            width: "100%",
-            height: "100%", 
-            maxWidth: { xs:"280px", md:"400px"},
-            maxHeight: { xs:"280px", md:"400px"},
-            borderRadius: "50%", 
-            border: "6px solid #baa4ee",
-          }}
-        />
       </Grid>
     </Grid>
   );
