@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { styled } from '@mui/system';
+import { styled } from "@mui/system";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -11,17 +11,17 @@ import "./Projects.css";
 import ProjectModal from "./ProjectModal";
 
 const PopCard = styled(CardMedia)(({ theme }) => ({
-  height: 'auto',
-  maxWidth: '100%',
-  position: 'relative',
-  overflow: 'hidden',
-  '&:hover .speedDialActions': {
-      opacity: 1,
-      visibility: 'visible',
+  height: "auto",
+  maxWidth: "100%",
+  position: "relative",
+  overflow: "hidden",
+  "&:hover .speedDialActions": {
+    opacity: 1,
+    visibility: "visible",
   },
-  transform: 'scale(0.9)',
-  '&:hover': {
-      transform: 'scale(1)',
+  transform: "scale(0.9)",
+  "&:hover": {
+    transform: "scale(1)",
   },
 }));
 
@@ -56,12 +56,11 @@ const Projects = () => {
         <Grid item xs={12} md={6} lg={4} key={project.id}>
           <PopCard
             sx={{
-              border: '0.1px solid #baa4ee',
-              boxShadow: 'rgba(23, 92, 230, 0.15) 0px 4px 24px',
-              borderRadius: '0.625rem',
-              padding: '26px 20px',
-              cursor: 'pointer',
-              height: 400,
+              border: "0.1px solid #baa4ee",
+              boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+              borderRadius: "0.625rem",
+              padding: "26px 20px",
+              cursor: "pointer",
               margin: "1rem",
             }}
             onClick={() => handleOpen(project)}
@@ -77,18 +76,22 @@ const Projects = () => {
               title={project.title}
             />
             <CardContent sx={{ textAlign: "start" }}>
-              <Stack sx={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                gap: "0.5rem",
-                marginTop: "1rem"
-              }}>
-                {project.tags.map((tag, index) => (
-                  <span className="project-tag" key={index}>
-                    {tag}
-                  </span>
-                ))}
+              <Stack sx={{ height: "4rem" }}>
+                <Stack
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                    marginTop: "1rem",
+                  }}
+                >
+                  {project.tags.map((tag, index) => (
+                    <span className="project-tag" key={index}>
+                      {tag}
+                    </span>
+                  ))}
+                </Stack>
               </Stack>
               <Typography
                 gutterBottom
@@ -102,11 +105,15 @@ const Projects = () => {
               >
                 {project.title}
               </Typography>
-              <Typography sx={{
-                fontSize: "12px",
-                fontWeight: "400",
-                marginBottom: "0.5rem"
-              }}>{project.date}</Typography>
+              <Typography
+                sx={{
+                  fontSize: "12px",
+                  fontWeight: "400",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                {project.date}
+              </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
@@ -124,8 +131,7 @@ const Projects = () => {
             </CardContent>
           </PopCard>
         </Grid>
-      ))
-      }
+      ))}
       <ProjectModal
         open={open}
         handleClose={handleClose}
@@ -144,7 +150,7 @@ const Projects = () => {
                     }
                 }
             `}</style>
-    </Grid >
+    </Grid>
   );
 };
 

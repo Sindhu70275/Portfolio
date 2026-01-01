@@ -5,7 +5,7 @@ export const Bio = {
     "A dedicated and skilled MERN Stack Developer with a strong focus on building dynamic and user-friendly web applications. I have a solid understanding of React.js for creating engaging front-end interfaces and MongoDB for efficient data management. Currently, I’m improving my skills in Express.js and Node.js to master the backend details and deliver complete full-stack solutions that enhance user experiences and support business success.",
   github: "https://github.com/Sindhu70275",
   resume:
-    "https://drive.google.com/file/d/1s-kJebZsIASM1FcZ9ZGvZ15CP7ufZAFJ/view?usp=drive_link",
+    "https://drive.google.com/file/d/1kLbYpfUMMw7hg1xGkjJ14OGDQ9O1REgE/view?usp=drivesdk",
   linkedin: "https://www.linkedin.com/in/jaya-sindhu-r/",
   email: "mailto:r.jayasindhu30@gmail.com",
 };
@@ -29,7 +29,7 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "React Js",
+        name: "React",
         image:
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
@@ -42,6 +42,14 @@ export const skills = [
         name: "Material UI",
         image:
           "https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png",
+      },
+      {
+        name: "ShadCN",
+        image: "https://ui.shadcn.com/apple-touch-icon.png",
+      },
+      {
+        name: "Tailwind CSS",
+        image: "https://www.svgrepo.com/show/374118/tailwind.svg",
       },
     ],
   },
@@ -122,25 +130,53 @@ export const education = [
 
 export const experience = [
   {
-    role: "Software Engineer",
+    role: "Software Engineer II",
     company: "Hexaware Technologies",
-    date: "July 2024 – Present",
+    date: "Mar 2025 – Present",
     details:
-      "As a skilled MERN stack developer, I excel in creating responsive web designs and have extensive knowledge of hooks. I am proficient in writing test cases with Jest, setting up ESLint for optimal code quality, and enhancing accessibility and performance using the Lighthouse tool. I have thoroughly explored and mastered these modern concepts. Additionally, I have maintained and modified backend systems to support new features, and developed backend APIs to facilitate these enhancements.",
+      "Currently working on 'Talent Central', a role-based internal platform designed to create and manage ARs (Assessment Requests) based on specific roles. ARs are nominated by TMGs and go through an approval workflow involving PMs and ASDMs. I focus on building scalable UI architecture, handling secure role-based access, and optimizing data flow using modern React patterns.",
+    technologies: [
+      "React (Vite)",
+      "Material UI",
+      "React Query",
+      "Custom Hooks",
+      "Proxy Configuration",
+      "REST APIs",
+    ],
+  },
+  {
+    role: "Software Engineer I",
+    company: "Hexaware Technologies",
+    date: "July 2024 – Feb 2024",
+    details:
+      "Worked on an artifactory web-app focused on managing and optimizing 3D assets. Gained a deep understanding of the 3D asset pipeline, including processes like baking, exporting, assembling, and reassembling assets. This project helped me enhance my skills in managing complex workflows, integrating full-stack solutions, and optimizing asset management systems.",
+    technologies: ["ReactJS", "ShadCN", "Tailwind CSS"],
   },
   {
     role: "Associate Software Engineer",
     company: "Hexaware Technologies",
     date: "Aug 2022 – June 2024",
     details:
-      "As a ReactJS Developer at Hexaware Technologies, I excelled in developing a mentor application using MUI, React Hooks and Hook Form. Leveraging HTML and CSS, created responsive, user-friendly interfaces while maintaining backend APIs. I conducted unit testing with Jest to ensure high-quality code. Collaborating closely with design and development teams, I enhanced web performance and streamlined development processes with reusable components.",
+      "As a ReactJS Developer, I contributed to a mentor application, utilizing MUI, React Hooks, and Hook Form for building responsive UIs. I wrote unit tests with Jest, implemented ESLint for code quality, and ensured performance with Lighthouse. My work also included developing backend APIs and optimizing web performance, while collaborating with cross-functional teams to streamline the development process through reusable components.",
+    technologies: [
+      "ReactJS",
+      "MUI",
+      "React Hooks",
+      "Hook Form",
+      "Jest",
+      "ESLint",
+      "Lighthouse",
+      "APIs",
+    ],
   },
   {
     role: "Premier Graduate Engineer Trainee",
     company: "Hexaware Technologies",
     location: "Chennai, Tamil Nadu, India",
     date: "Feb 2022 – July 2022",
-    details: `As a Premier Graduate Engineer Trainee at Hexaware Technologies, I managed Kubernetes resources on Azure using ARM, deployed applications to GCP services with Terraform, and developed a CRUD application for Employee Service, setting up MySQL databases. I also led the migration from monolithic .NET apps to a cloud-native architecture.`,
+    details:
+      "Worked on a Amaze Cloud app on managing cloud infrastructure, deployed applications using terraform and ARM templates",
+    technologies: ["Terraform", "DevOps", "Kubernetes"],
   },
 ];
 
@@ -151,7 +187,8 @@ export const projects = [
     date: "Oct 2024",
     description:
       "Fab Finds is a fully responsive e-commerce web app, leveraging the Fake Store API for dynamic product listings. Built with React, it features efficient navigation using React Router DOM, and integrates the useEffect hook to handle API interactions. The app offers advanced product filtering, including category and rating filters, as well as sorting functionalities (price high to low, low to high). Cart management—add, update, and delete actions—are implemented using the useContext hook, ensuring seamless user experience across shopping activities.",
-    image: "https://github.com/Sindhu70275/Assets/blob/main/fabfinds.jpeg?raw=true",
+    image:
+      "https://github.com/Sindhu70275/Assets/blob/main/fabfinds.jpeg?raw=true",
     tags: ["Fake Store API", "useContext Hook", "React", "MUI"],
     category: "web app",
     github: "https://github.com/Sindhu70275/FabFinds",
@@ -159,15 +196,16 @@ export const projects = [
   },
   {
     id: 2,
-    title: "VIP Restaurant",
+    title: "Match Game",
     date: "Sept 2024",
     description:
-      "VIP Restaurant is a sleek web app built using React and the MUI library, showcasing my skills in form handling with React Hook Form. The platform allows users to easily explore restaurant offerings with an engaging and dynamic interface. To enhance user experience, subtle animations have been incorporated, adding a playful touch to interactions. The app is designed to be responsive and intuitive, with the potential for further enhancements like user accounts and personalized features. Explore the live project here to see it in action.",
-    image: "https://github.com/Sindhu70275/Assets/blob/main/vip.png?raw=true",
-    tags: ["React", "Material-UI"],
-    category: "web app",
-    github: "https://github.com/Sindhu70275/Vibrantly-Impressive-Plates",
-    webapp: "https://vibrantly-impressive-plates.netlify.app/",
+      "The Match Game is an engaging image-matching game where players are shown a random image from one of three categories—fruits, places, and animals—and must match it with the correct image from a set of 10 images per category. The game features a 60-second timer, and if players fail to match the image, the game ends and displays the score. Players can restart the game by clicking Play Again, which resets the timer and score. Built using MUI for a responsive layout, I utilized React’s useState and useEffect hooks for state management and timer logic, and implemented ESLint for error checking and organized imports.",
+    image:
+      "https://github.com/Sindhu70275/Assets/blob/main/match%20game.png?raw=true",
+    tags: ["useState Hook", "useEffect Hook", "MUI"],
+    category: "webgame app",
+    github: "https://github.com/Sindhu70275/Match-Game",
+    webapp: "https://matchthepicsgame.netlify.app/",
   },
   {
     id: 1,
@@ -183,15 +221,14 @@ export const projects = [
   },
   {
     id: 0,
-    title: "Match Game",
+    title: "VIP Restaurant",
     date: "Sept 2024",
     description:
-      "The Match Game is an engaging image-matching game where players are shown a random image from one of three categories—fruits, places, and animals—and must match it with the correct image from a set of 10 images per category. The game features a 60-second timer, and if players fail to match the image, the game ends and displays the score. Players can restart the game by clicking Play Again, which resets the timer and score. Built using MUI for a responsive layout, I utilized React’s useState and useEffect hooks for state management and timer logic, and implemented ESLint for error checking and organized imports.",
-    image:
-      "https://github.com/Sindhu70275/Assets/blob/main/match%20game.png?raw=true",
-    tags: ["useState Hook", "useEffect Hook", "MUI"],
-    category: "webgame app",
-    github: "https://github.com/Sindhu70275/Match-Game",
-    webapp: "https://matchthepicsgame.netlify.app/",
+      "VIP Restaurant is a sleek web app built using React and the MUI library, showcasing my skills in form handling with React Hook Form. The platform allows users to easily explore restaurant offerings with an engaging and dynamic interface. To enhance user experience, subtle animations have been incorporated, adding a playful touch to interactions. The app is designed to be responsive and intuitive, with the potential for further enhancements like user accounts and personalized features. Explore the live project here to see it in action.",
+    image: "https://github.com/Sindhu70275/Assets/blob/main/vip.png?raw=true",
+    tags: ["React", "Material-UI"],
+    category: "web app",
+    github: "https://github.com/Sindhu70275/Vibrantly-Impressive-Plates",
+    webapp: "https://vibrantly-impressive-plates.netlify.app/",
   },
 ];

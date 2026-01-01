@@ -35,14 +35,10 @@ const Experience = () => {
         {experience.map((item, index) => (
           <TimelineItem
             key={index}
-            sx={
-              isSmallScreen
-                ? {
-                  display: "flex",
-                  flexDirection: "column",
-                }
-                : {}
-            }
+            sx={{
+              display: "flex",
+              flexDirection: isSmallScreen ? "column" : "row",
+            }}
           >
             <TimelineSeparator
               sx={{
@@ -51,37 +47,48 @@ const Experience = () => {
               }}
             >
               <TimelineDot variant="outlined" />
-              {index < experience.length && <TimelineConnector />}
+              {index < experience.length - 1 && <TimelineConnector />}
             </TimelineSeparator>
-            <TimelineContent sx={{
-              border: "0.1px solid #baa4ee",
-              boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-              borderRadius: "12px",
-              padding: "12px 16px",
-              marginBottom: "1rem"
-            }}>
-              <Typography sx={{
-                fontSize: "1.5rem",
-                fontWeight: "500"
-              }}>
+            <TimelineContent
+              sx={{
+                border: "0.1px solid #baa4ee",
+                boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+                borderRadius: "12px",
+                padding: "12px 16px",
+                marginBottom: "1rem",
+              }}
+            >
+              <Typography sx={{ fontSize: "1.5rem", fontWeight: "500" }}>
                 {item.company}
               </Typography>
-              <Typography sx={{
-                fontSize: "1.2rem",
-                fontWeight: "400",
-              }}>{item.role}</Typography>
-              <Typography sx={{
-                fontSize: "1rem",
-                fontWeight: "600",
-                color: "#baa4ee"
-              }}>{item.date}</Typography>
-              <Typography sx={{
-                fontSize: "1rem",
-                fontWeight: "300",
-                marginTop: "0.5rem",
-              }}>
+              <Typography sx={{ fontSize: "1.2rem", fontWeight: "400" }}>
+                {item.role}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "1rem",
+                  fontWeight: "600",
+                  color: "#baa4ee",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                {item.date}
+              </Typography>
+              <Typography sx={{ fontSize: "1rem", fontWeight: "300" }}>
                 {item.details}
               </Typography>
+              {item.technologies && item.technologies.length > 0 && (
+                <Typography
+                  sx={{
+                    fontSize: "1rem",
+                    fontWeight: "200",
+                    marginTop: "0.8rem",
+                  }}
+                >
+                  <span style={{ fontWeight: 500 }}>Technologies:</span>{" "}
+                  {item.technologies.join(", ")}
+                </Typography>
+              )}
             </TimelineContent>
           </TimelineItem>
         ))}

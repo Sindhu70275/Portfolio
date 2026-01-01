@@ -31,32 +31,36 @@ const Skills = () => {
       </Grid>
       {skills.map((skill, index) => (
         <Grid item xs={12} md={6} key={index}>
-          <Item sx={{
-            border: "0.1px solid #baa4ee",
-            borderRadius: "1rem",
-            boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-            padding: "18px 36px",
-            margin: "1rem",
-          }}>
+          <Item
+            sx={{
+              border: "0.1px solid #baa4ee",
+              borderRadius: "1rem",
+              boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+              padding: "18px 36px",
+              margin: "1rem",
+            }}
+          >
             <Typography variant="h6" sx={{ marginBottom: "1rem" }}>
               {skill.title}
             </Typography>
-            <Grid container spacing={2} sx={{ justifyContent: "center", }}>
+            <Grid container spacing={2} sx={{ justifyContent: "center" }}>
               {skill.skills.map((item, idx) => (
                 <Grid item key={idx}>
-                  <Stack spacing={1} sx={{
-                    border: "0.1px solid #baa4ee",
-                    boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-                    fontWeight: "400",
-                    borderRadius: "12px",
-                    padding: "0.75rem 1rem",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "8px",
-                    fontSize: "1rem"
-                  }}>
+                  <Stack
+                    sx={{
+                      border: "0.1px solid #baa4ee",
+                      boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+                      fontWeight: "400",
+                      borderRadius: "12px",
+                      padding: "0.75rem 1rem",
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                      fontSize: "1rem",
+                    }}
+                  >
                     <img
                       src={item.image}
                       alt={item.name}
@@ -68,9 +72,9 @@ const Skills = () => {
               ))}
             </Grid>
           </Item>
-        </Grid >
+        </Grid>
       ))}
-    </Grid >
+    </Grid>
   );
 };
 
