@@ -5,7 +5,7 @@ export const Bio = {
     "A dedicated and skilled MERN Stack Developer with a strong focus on building dynamic and user-friendly web applications. I have a solid understanding of React.js for creating engaging front-end interfaces and MongoDB for efficient data management. Currently, I’m improving my skills in Express.js and Node.js to master the backend details and deliver complete full-stack solutions that enhance user experiences and support business success.",
   github: "https://github.com/Sindhu70275",
   resume:
-    "https://drive.google.com/file/d/1kLbYpfUMMw7hg1xGkjJ14OGDQ9O1REgE/view?usp=drivesdk",
+    "https://drive.google.com/file/d/1uehMBPI32ytOaLTR65fpJJ8MVzLEdje6/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/jaya-sindhu-r/",
   email: "mailto:r.jayasindhu30@gmail.com",
 };
