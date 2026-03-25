@@ -21,12 +21,12 @@ export const skills = [
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCBJ8fz6KNK6Ut3df5khikEAXIkhoquFuFgw&s",
       },
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       },
       {
         name: "React",
@@ -41,7 +41,7 @@ export const skills = [
       {
         name: "Material UI",
         image:
-          "https://seeklogo.com/images/M/material-ui-logo-5BDCB9BA8F-seeklogo.com.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT24yngytUOIN7kNfMS6jqCw6D8l3rgAPJrwQ&s",
       },
       {
         name: "ShadCN",
@@ -64,7 +64,7 @@ export const skills = [
       {
         name: "Express JS",
         image:
-          "https://aglowiditsolutions.com/wp-content/uploads/2018/12/ExpressJS-300x300.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1GfaU9_WzvckG5LFqsa23etg46xUBFbHw4w&s",
       },
       {
         name: "MongoDB",
@@ -83,7 +83,7 @@ export const skills = [
       {
         name: "Git",
         image:
-          "https://seeklogo.com/images/G/git-logo-CD8D6F1C09-seeklogo.com.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFT1MO4Ln0Ynz4VKkD2EDyylsYzoVg1d8FiQ&s",
       },
       {
         name: "GitHub",
@@ -182,6 +182,32 @@ export const experience = [
 
 export const projects = [
   {
+    id: 5,
+    title: "SkillPath",
+    date: "Mar 2026",
+    description:
+      "SkillPath is a full-stack career learning platform built with React 19, Material-UI, and Vite on the frontend, and Node.js with Express 5 and MongoDB on the backend. It leverages TanStack React Query for efficient server state handling and React Hook Form for robust form management. The app is organized using a feature-based architecture, where each page has a root component and its own folder of subcomponents, ensuring clean separation of concerns and scalability. The backend implements JWT authentication, bcrypt-based password hashing, and Joi validation, providing secure and reliable workflows. Role-based layouts (public, authenticated, admin) and analytics dashboards enhance usability. Deployed with Netlify (frontend) and Render (backend), SkillPath demonstrates production-ready practices including CORS handling, environment variable management, and responsive UI design.",
+    image:
+      "https://github.com/Sindhu70275/Assets/blob/main/skill-path.png?raw=true",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "MUI",
+      "TanStack Query",
+      "React Context",
+      "React Hook Form",
+      "JWT Authentication",
+      "Bcrypt",
+      "Joi Validation",
+      "Feature-Based Architecture",
+    ],
+    category: "full-stack app",
+    github: "https://github.com/Sindhu70275/Skill_Path",
+    webapp: "https://skill-path-career.netlify.app/",
+  },
+  {
     id: 3,
     title: "Fab Finds - Ecommerce",
     date: "Oct 2024",
@@ -189,7 +215,7 @@ export const projects = [
       "Fab Finds is a fully responsive e-commerce web app, leveraging the Fake Store API for dynamic product listings. Built with React, it features efficient navigation using React Router DOM, and integrates the useEffect hook to handle API interactions. The app offers advanced product filtering, including category and rating filters, as well as sorting functionalities (price high to low, low to high). Cart management—add, update, and delete actions—are implemented using the useContext hook, ensuring seamless user experience across shopping activities.",
     image:
       "https://github.com/Sindhu70275/Assets/blob/main/fabfinds.jpeg?raw=true",
-    tags: ["Fake Store API", "useContext Hook", "React", "MUI"],
+    tags: ["Fake Store API", "React Context", "MUI", "React", "Vite"],
     category: "web app",
     github: "https://github.com/Sindhu70275/FabFinds",
     webapp: "https://fabfinds-ecommerce.netlify.app/",

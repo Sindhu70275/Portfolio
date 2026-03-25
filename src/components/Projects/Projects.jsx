@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
+import Tooltip from "@mui/material/Tooltip";
 
 import { projects } from "../../constants/constants";
 import "./Projects.css";
@@ -24,6 +25,8 @@ const PopCard = styled(CardMedia)(({ theme }) => ({
     transform: "scale(1)",
   },
 }));
+
+const MAX_VISIBLE_TAGS = 5;
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
@@ -52,86 +55,102 @@ const Projects = () => {
           A Collection of My Technical Endeavors and Achievements
         </Typography>
       </Grid>
-      {projects.map((project) => (
-        <Grid item xs={12} md={6} lg={4} key={project.id}>
-          <PopCard
-            sx={{
-              border: "0.1px solid #baa4ee",
-              boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-              borderRadius: "0.625rem",
-              padding: "26px 20px",
-              cursor: "pointer",
-              margin: "1rem",
-            }}
-            onClick={() => handleOpen(project)}
-          >
-            <CardMedia
-              component="img"
+      {projects.map((project) => {
+        const visibleTags = project.tags.slice(0, MAX_VISIBLE_TAGS);
+        const hiddenTags = project.tags.slice(MAX_VISIBLE_TAGS);
+
+        return (
+          <Grid item xs={12} md={6} lg={4} key={project.id}>
+            <PopCard
               sx={{
-                height: "auto",
-                width: "100%",
-                borderRadius: "10px",
+                border: "0.1px solid #baa4ee",
+                boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+                borderRadius: "0.625rem",
+                padding: "26px 20px",
+                cursor: "pointer",
+                margin: "1rem",
               }}
-              image={project.image}
-              title={project.title}
-            />
-            <CardContent sx={{ textAlign: "start" }}>
-              <Stack sx={{ height: "4rem" }}>
-                <Stack
+              onClick={() => handleOpen(project)}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  height: "auto",
+                  width: "100%",
+                  borderRadius: "10px",
+                }}
+                image={project.image}
+                title={project.title}
+              />
+              <CardContent sx={{ textAlign: "start" }}>
+                <Stack sx={{ height: "4rem" }}>
+                  <Stack
+                    sx={{
+                      display: "flex",
+                      flexDirection: "row",
+                      flexWrap: "wrap",
+                      gap: "0.5rem",
+                      marginTop: "1rem",
+                    }}
+                  >
+                    {visibleTags.map((tag, index) => (
+                      <span className="project-tag" key={index}>
+                        {tag}
+                      </span>
+                    ))}
+                    {hiddenTags.length > 0 && (
+                      <Tooltip
+                        title={hiddenTags.join(", ")}
+                        arrow
+                        placement="top"
+                      >
+                        <span className="project-tag">
+                          +{hiddenTags.length} more
+                        </span>
+                      </Tooltip>
+                    )}
+                  </Stack>
+                </Stack>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
                   sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    flexWrap: "wrap",
-                    gap: "0.5rem",
-                    marginTop: "1rem",
+                    margin: "1rem 0rem 0.3rem 0rem",
+                    fontSize: "20px",
+                    fontWeight: "600",
                   }}
                 >
-                  {project.tags.map((tag, index) => (
-                    <span className="project-tag" key={index}>
-                      {tag}
-                    </span>
-                  ))}
-                </Stack>
-              </Stack>
-              <Typography
-                gutterBottom
-                variant="h5"
-                component="div"
-                sx={{
-                  margin: "1rem 0rem 0.3rem 0rem",
-                  fontSize: "20px",
-                  fontWeight: "600",
-                }}
-              >
-                {project.title}
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "12px",
-                  fontWeight: "400",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                {project.date}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  display: "-webkit-box",
-                  WebkitBoxOrient: "vertical",
-                  whiteSpace: "normal",
-                  WebkitLineClamp: 3,
-                }}
-              >
-                {project.description}
-              </Typography>
-            </CardContent>
-          </PopCard>
-        </Grid>
-      ))}
+                  {project.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "12px",
+                    fontWeight: "400",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  {project.date}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    whiteSpace: "normal",
+                    WebkitLineClamp: 3,
+                  }}
+                >
+                  {project.description}
+                </Typography>
+              </CardContent>
+            </PopCard>
+          </Grid>
+        );
+      })}
       <ProjectModal
         open={open}
         handleClose={handleClose}

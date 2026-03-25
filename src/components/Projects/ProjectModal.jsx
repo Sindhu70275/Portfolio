@@ -6,12 +6,18 @@ import CardActions from "@mui/material/CardActions";
 import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import Tooltip from "@mui/material/Tooltip";
 
 import CustomButton from "../../common/CustomButton";
-import "./Projects.css"
+import "./Projects.css";
+
+const MAX_VISIBLE_TAGS = 6;
 
 const ProjectModal = ({ open, handleClose, project }) => {
   if (!project) return null;
+
+  const visibleTags = project.tags.slice(0, MAX_VISIBLE_TAGS);
+  const hiddenTags = project.tags.slice(MAX_VISIBLE_TAGS);
 
   return (
     <Modal open={open} onClose={handleClose}>
@@ -44,9 +50,9 @@ const ProjectModal = ({ open, handleClose, project }) => {
           <CloseIcon />
         </IconButton>
         <CardMedia
-          sx={{ 
-            width: "100%", 
-            height: { xs: "150px", md: "360px" }, 
+          sx={{
+            width: "100%",
+            height: { xs: "150px", md: "360px" },
             objectFit: "cover",
             borderRadius: "10px",
             marginY: "1rem",
@@ -60,13 +66,18 @@ const ProjectModal = ({ open, handleClose, project }) => {
         <Stack
           direction="row"
           spacing={1}
-          sx={{ marginBottom: "1rem" }}
+          sx={{ marginBottom: "1rem", flexWrap: "wrap" }}
         >
-          {project.tags.map((tag, index) => (
+          {visibleTags.map((tag, index) => (
             <span className="project-tag" key={index}>
               {tag}
             </span>
           ))}
+          {hiddenTags.length > 0 && (
+            <Tooltip title={hiddenTags.join(", ")} arrow placement="top">
+              <span className="project-tag">+{hiddenTags.length} more</span>
+            </Tooltip>
+          )}
         </Stack>
         <Typography
           variant="body2"
@@ -75,16 +86,27 @@ const ProjectModal = ({ open, handleClose, project }) => {
         >
           {project.description}
         </Typography>
-        <CardActions sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          padding: "0rem",
-        }}>
-          <CustomButton label="View Code" variant="Contained" width="100%" target="display"
-            href={project.github}/>
-          <CustomButton label="View Live App" width="100%" target="display"
-            href={project.webapp}/>
+        <CardActions
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            padding: "0rem",
+          }}
+        >
+          <CustomButton
+            label="View Code"
+            variant="Contained"
+            width="100%"
+            target="display"
+            href={project.github}
+          />
+          <CustomButton
+            label="View Live App"
+            width="100%"
+            target="display"
+            href={project.webapp}
+          />
         </CardActions>
       </Box>
     </Modal>
